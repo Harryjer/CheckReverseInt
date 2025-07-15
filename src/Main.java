@@ -1,15 +1,20 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //5698741
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your preffered number ");
+        int num = sc.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int rev = 0;
+        while(num!=0){
+            rev = rev * 10 + num % 10;
+            num = num / 10;
         }
+        System.out.println(rev);
+        System.out.println("Test");
     }
 }
